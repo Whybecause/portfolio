@@ -6,46 +6,48 @@ import SkillCard from "../Tools/SkillCard";
 
 function Header() {
   return (
-    <Container className=" p-top-10 h-page " id="accueil">
-      <Row className="dfaicjcc">
-        <motion.h1
-          initial={{ opacity: 0, x: 0, y: -200 }}
-          animate={{ opacity: 1, x: 0, y: 0 }}
-          transition={{ duration: 2 }}
-          className="text-center"
-        >
-          Développeur Full-Stack Junior
-        </motion.h1>
-      </Row>
-      <Row className="dfaicjcc m-top-1">
-        <motion.p
-          initial={{ opacity: 0, x: 5000, y: 1000 }}
-          animate={{ opacity: 1, x: 0, y: 0 }}
-          transition={{ duration: 2 }}
-          className="text-center"
-        >
-          En formation de chef de projet digital & autodidacte
-        </motion.p>
-      </Row>
-      <Row className="dfaicjcc m-top-1">
-        <motion.img
-          whileHover={{ scale: 1.1 }}
-          drag
-          dragConstraints={{
-            top: -5,
-            left: -5,
-            right: 5,
-            bottom: 5,
-          }}
-          initial={{ opacity: 0, x: -5000, y: -0 }}
-          animate={{ opacity: 1, x: 0, y: 0 }}
-          transition={{ duration: 2 }}
-          src={profil}
-          alt="profil"
-          className="profil-img"
-        ></motion.img>
-      </Row>
-      <Row className="p-top-5 ">
+    <Container className="resp-p-container  h-page" id="accueil">
+      <div className="h-80">
+        <Row className="dfaicjcc ">
+          <motion.h1
+            initial={{ opacity: 0, x: 0, y: -200 }}
+            animate={{ opacity: 1, x: 0, y: 0 }}
+            transition={{ duration: 2 }}
+            className="text-center"
+          >
+            Développeur Full-Stack Junior
+          </motion.h1>
+        </Row>
+        <Row className="dfaicjcc p-top-1">
+          <motion.p
+            initial={{ opacity: 0, x: 5000, y: 1000 }}
+            animate={{ opacity: 1, x: 0, y: 0 }}
+            transition={{ duration: 2 }}
+            className="text-center"
+          >
+            En formation de chef de projet digital & autodidacte
+          </motion.p>
+        </Row>
+        <Row className="dfaicjcc p-top-1">
+          <motion.img
+            whileHover={{ scale: 1.1 }}
+            drag
+            dragConstraints={{
+              top: -5,
+              left: -5,
+              right: 5,
+              bottom: 5,
+            }}
+            initial={{ opacity: 0, x: -5000, y: -0 }}
+            animate={{ opacity: 1, x: 0, y: 0 }}
+            transition={{ duration: 2 }}
+            src={profil}
+            alt="profil"
+            className="profil-img"
+          ></motion.img>
+        </Row>
+      </div>
+      <Row className="h-40">
         <Col lg={4} md={4} sm={6} xs={6} className="static">
           <SkillCard
             title="HTML"

@@ -79,6 +79,10 @@ img {
 .p-bot-5 {
   padding-bottom: 5rem;
 }
+.p-bot-10 {
+  padding-bottom: 10rem;
+}
+
 .p-right-3 {
   padding-right: 2rem;
 }
@@ -93,6 +97,10 @@ img {
 
 .h-page {
   height: 100vh;
+}
+
+.half-page {
+  height: 50vh;
 }
 
 .w-50 {
@@ -147,3 +155,20 @@ img {
   max-width: 1000px;
 }
 
+@media only screen and (max-width:400px){
+  .resp-p-container {
+    padding-top: 4rem;
+  }
+}
+@media only screen and (min-width:400px){
+  .resp-p-container {
+    padding-top: 10rem;
+  }
+}
+
+.h-80 {
+  height: 60%;
+}
+.h-40 {
+  height: 40%;
+}
