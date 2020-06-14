@@ -1,0 +1,32 @@
+body {
+    background: linear-gradient(180deg, #0055ff 0%, rgb(0, 153, 255) 100%);
+      /* background: linear-gradient(180deg, #140c11 0%, rgb(17, 13, 43) 100%); */
+}
+
+.bg-card {
+  background: linear-gradient(180deg, #140c11 0%, rgb(17, 13, 43) 100%);
+}
+
+.bg-body {
+  background: linear-gradient(180deg, #140c11 0%, #0055ff 100%);
+
+}
+
+.c-btn {
+  background: transparent;
+}
+
+/* Nav Background */
+.background {
+  background: #fff;
+}
+
+.text-placeholder {
+  /* background: linear-gradient(180deg, #140c11 0%, rgb(17, 13, 43) 100%); */
+  background: linear-gradient(180deg, #2b4a5f 0%, rgb(13, 6, 58) 100%);
+}
+
+.text-black {
+  color: black;
+}
+
