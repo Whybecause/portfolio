@@ -1,17 +1,30 @@
 const nodemailer = require('nodemailer');
+const { google } = require('googleapis');
+const OAuth2 = google.auth.OAuth2;
+const oauth2Client = new OAuth2 (
+  process.env.OAUTH2_ID,
+  process.env.OAUTH2_CODE,
+  "https://developers.google.com/oauthplayground"
+);
+oauth2Client.setCredentials({
+  refresh_token: process.env.OAUTH2_REFRESH_TOKEN
+});
+const accessToken = oauth2Client.getAccessToken();
 
 const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true,
+    service: "gmail",
     auth: {
-        user : process.env.ADMIN_EMAIL,
-        pass: process.env.ADMIN_PASS
+      type: "OAuth2",
+      user: process.env.ADMIN_EMAIL,
+      clientId: process.env.OAUTH2_ID,
+      clientSecret: process.env.OAUTH2_CODE,
+      refreshToken: process.env.OAUTH2_REFRESH_TOKEN,
+      accessToken: accessToken
     },
     tls: {
-        rejectUnauthorized: false
+      rejectUnauthorized: false,
     }
-    });
+});
 
 exports.sendContactForm = (req, res, next) => {
     const { name, email, message } = req.body;
@@ -23,10 +36,7 @@ exports.sendContactForm = (req, res, next) => {
         text: content
     };
     transporter.sendMail(mailOptions, function(error, info) {
-        if (error) {
-            return res.status(400).send({ error: 'Something went wrong...'})
-        } else {
-            return res.status(200).send({ message: 'Votre message a été envoyé !'})
-        }
+        error ? res.status(400).send({ error: 'Something went wrong...'}) : res.status(200).send({ message: 'Votre message a été envvoyé !'});
+        return transporter.close();
     });
 }

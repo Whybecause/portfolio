@@ -19,7 +19,7 @@ function RentalDescription() {
         Bouton permettant de recevoir un mail pour changer un mot de passe
         oublié
       </p>
-      <h3>Pag utilisateur</h3>
+      <h3>Page utilisateur</h3>
       <p>Informations sur le détail de la location effectuée</p>
       <h3>Page Profil Utilisateur</h3>
       <p>Possibilité de modifier le mot de passe actuel</p>
