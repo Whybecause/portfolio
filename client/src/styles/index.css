@@ -155,20 +155,43 @@ img {
   max-width: 1000px;
 }
 
-@media only screen and (max-width:400px){
+@media only screen and (max-width:412px){
   .resp-p-container {
-    padding-top: 4rem;
+    padding-top: 5rem;
+  }
+  h2 {
+    font-size: 1rem!important;
+  }
+  h1 {
+    font-size: 2rem!important;
+  }
+  .skill-card {
+    border-radius: 2rem;
+    border: 10px solid white;
+    box-shadow: 12px 12px 2px 1px rgba(2, 2, 37, 0.2);
   }
 }
-@media only screen and (min-width:400px){
+@media only screen and (min-width:412px){
   .resp-p-container {
-    padding-top: 10rem;
+    padding-top: 5rem;
   }
+
+
 }
 
-.h-80 {
+.h-60 {
   height: 60%;
 }
+
 .h-40 {
   height: 40%;
+}
+
+.h-50 {
+  height: 50%;
+}
+
+
+.margin-top {
+  padding-top: 5rem;
 }

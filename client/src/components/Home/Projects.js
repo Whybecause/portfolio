@@ -6,9 +6,11 @@ import Thumbnail from "../Tools/Thumbnail.js";
 
 import RentalDescription from '../ProjetsDescription/RentalDescription';
 import WeatherDescription from '../ProjetsDescription/WeatherDescription';
+import OkspDescription from '../ProjetsDescription/OkspDescription';
 import house from "../../assets/house.svg";
 import sun from "../../assets/sun.svg";
-import wordpress from "../../assets/wordpress-simple-brands.svg";
+// import wordpress from "../../assets/wordpress-simple-brands.svg";
+import band from '../../assets/band.svg'
 
 
 function Projects(props) {
@@ -24,24 +26,25 @@ function Projects(props) {
             github="https://github.com/Whybecause/mataviguette"
             modalHeader="Site permettant la réservation d'une location"
             modalContent={RentalDescription()}
-            />
-            <Thumbnail
-              image={sun}
-              link="https://maxencetrainaweatherapp.herokuapp.com/"
-              title="Weather App"
-              category="Javascript"
-              github="https://github.com/Whybecause/weather_app"
-              modalHeader="Application Meteo en javascript"
-              modalContent={WeatherDescription()}
-              />
-            <Thumbnail
-              image={wordpress}                                                                    
-              link=""
-              title="En cours"
-              category="PHP - Thème Wordpress "
-              github=""
-              modalText=""
-              />
+          />
+          <Thumbnail
+            image={band}                                                                    
+            link="https://okessapar.com"
+            title="Music Band"
+            category="MERN Stack "
+            github="https://github.com/Whybecause/okessapar"
+            modalHeader="Site pour la communication d'un groupe de musique"
+            modalContent={OkspDescription()}
+          />
+          <Thumbnail
+            image={sun}
+            link="https://maxencetrainaweatherapp.herokuapp.com/"
+            title="Weather App"
+            category="Javascript"
+            github="https://github.com/Whybecause/weather_app"
+            modalHeader="Application Meteo en javascript"
+            modalContent={WeatherDescription()}
+          />
         </Row>
       </MotionCards>
     </Container>
