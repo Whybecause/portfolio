@@ -1,7 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
+  "description": "portfolio API",
   "main": "server.js",
   "engines": {
     "node": "12.18.4"
