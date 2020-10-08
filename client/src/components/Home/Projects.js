@@ -29,7 +29,11 @@ function Projects(props) {
           />
           <Thumbnail
             image={band}                                                                    
+<<<<<<< HEAD
             link="https://www.okessapar.com"
+=======
+            link="https://okessapar.com"
+>>>>>>> de8a87c86c8d33a8bb4a3d9be480864364f1d921
             title="Music Band"
             category="MERN Stack "
             github="https://github.com/Whybecause/okessapar"
