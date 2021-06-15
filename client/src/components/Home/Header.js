@@ -17,7 +17,7 @@ function Header() {
               transition={{ duration: 2 }}
               className="text-center"
             >
-              Développeur Full-Stack Junior
+              Développeur Full-Stack Javascript
             </motion.h1>
           </Row>
           <Row className="dfaicjcc p-top-1">
@@ -27,7 +27,7 @@ function Header() {
               transition={{ duration: 2 }}
               className="text-center"
             >
-              En formation de chef de projet digital & autodidacte
+              En formation Bac + 5 Développeur Web & autodidacte
             </motion.p>
           </Row>
           <Row className="dfaicjcc p-top-1">

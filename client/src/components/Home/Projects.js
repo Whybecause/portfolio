@@ -7,10 +7,14 @@ import Thumbnail from "../Tools/Thumbnail.js";
 import RentalDescription from '../ProjetsDescription/RentalDescription';
 import WeatherDescription from '../ProjetsDescription/WeatherDescription';
 import OkspDescription from '../ProjetsDescription/OkspDescription';
+import SpiidApp from '../ProjetsDescription/Spiid_App';
+import AmazonChecker from '../ProjetsDescription/AmazonCheckerDescription';
 import house from "../../assets/house.svg";
 import sun from "../../assets/sun.svg";
 // import wordpress from "../../assets/wordpress-simple-brands.svg";
 import band from '../../assets/band.svg'
+import trot from '../../assets/trotinette.png';
+import amz from '../../assets/loop-pngrepo-com.png';
 
 
 function Projects(props) {
@@ -35,6 +39,24 @@ function Projects(props) {
             github="https://github.com/Whybecause/okessapar"
             modalHeader="Site pour la communication d'un groupe de musique"
             modalContent={OkspDescription()}
+          />
+          <Thumbnail
+            image={amz}                                                                    
+            link="https://github.com/Whybecause/amazon_checker"
+            title="Amazon Buybox Checker"
+            category="MERN Stack "
+            github="https://github.com/Whybecause/amazon_checker"
+            modalHeader="Automatisation de vérification de buybox sur Amazon"
+            modalContent={AmazonChecker()}
+          />
+          <Thumbnail
+            image={trot}                                                                    
+            link="https://github.com/Whybecause/Spiid_App"
+            title="Spiid App"
+            category="MERN Stack "
+            github="https://github.com/Whybecause/Spiid_App"
+            modalHeader="Location de trotinettes géolocalisées"
+            modalContent={SpiidApp()}
           />
           <Thumbnail
             image={sun}
