@@ -23,18 +23,18 @@ function RentalDescription() {
       <p>Informations sur le détail de la location effectuée</p>
       <h3>Page Profil Utilisateur</h3>
       <p>Possibilité de modifier le mot de passe actuel</p>
-      <h3>Page ADMIN (pour utilisateurs ayant ce rôle uniquement)</h3>
+      <h3>Page ADMIN</h3>
       <p>
         Visualisation des détails de la location proposée avec possibilité de
         les modifier
       </p>
       <p>Visualisation de toutes les réservations effectuées sur cette offre</p>
       <p>
-        Bouton associé à chaque réservation permettant d'envoyer un email au
+        Bouton associé à chaque réservation permettant d'envoyer un message au
         locataire
       </p>
       <h3>Réservation</h3>
-      <p>Les dates proposées sont synchronisées sur un google calendar dédié</p>
+      <p>Les dates proposées sont synchronisées sur un google calendar dédié avec vérification de la disponibilité de l'annonce sur Airbnb.</p>
       <p>
         Utilisation de l'API Google calendar pour désactiver la possibilité de
         booker des dates déjà prises
@@ -48,14 +48,13 @@ function RentalDescription() {
         avec récapitulation des infos de la location et facture
       </p>
       <h3>Commentaires</h3>
-      <p>Possible de poster un commentaire si connecté</p>
-      <p>L'ADMIN peut supprimer les commentaires</p>
+      <p>Les utilisateurs ayant effectué une réseravtion arrivée à échéance ont la possibilité de laisser un commentaire sur le séjour, de l'éditer et le supprimer</p>
       <h3>Emplacement</h3>
       <p>
         Utilisation de Google Map API pour afficher l'emplacement de la location
       </p>
       <h3>Contacter l'hôte</h3>
-      <p>Formulaire à remplir qui envoie un mail à l'hôte (nodemailer)</p>
+      <p>Formulaire à remplir qui envoie un mail à l'hôte</p>
     </div>
   );
 }

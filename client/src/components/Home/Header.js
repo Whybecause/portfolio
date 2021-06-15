@@ -97,7 +97,7 @@ function Header() {
           </Col>
           <Col lg={4} md={4} sm={6} xs={6} className="static">
             <SkillCard
-              title="PHP"
+              title="Typescript"
               initial={{ opacity: 0, x: 20000, y: 0 }}
               transition={{ duration: 5 }}
             />

@@ -20,8 +20,8 @@ function Projects(props) {
         <Row lg={3} md={2} sm={2} xs={2} id="projects" className="m-top-1">
           <Thumbnail
             image={house}
-            link="https://mataviguette.herokuapp.com"
-            title="House Rental"
+            link="https://www.lamataviguette.fr"
+            title="Location saisonnière d'une maison de vacances"
             category="MERN Stack"
             github="https://github.com/Whybecause/mataviguette"
             modalHeader="Site permettant la réservation d'une location"
