@@ -1,0 +1,10 @@
+.git/
+.gitignore
+.next/                # Existing Next.js builds
+.dockerignore
+Dockerfile
+Dockerfile.prod
+docker-compose.prod.yml
+docker-compose.yml
+node_modules/         # Installed inside container
+nginx/
