@@ -1,12 +1,15 @@
-.background {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url('/background1.jpg');
-  height: calc(100vh - 48px);
+.bgContainer {
+  /* So the bg is filled before the img background is rendered */
+  background-color: var(--nav);
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   color: var(--white);
 }
 
-.container {
+.textContainer {
   padding-top: 7rem;
   padding-bottom: 7rem;
   display: flex;

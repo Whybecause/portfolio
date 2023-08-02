@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={primaryFont.variable}>
-        <main id="primaryFont">
+        <main id="primaryFont" className="flex flex-col">
           <Navbar />
           {children}
           <footer></footer>
