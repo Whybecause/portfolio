@@ -47,7 +47,7 @@ export default function Navbar() {
     <nav
       id="nav"
       ref={navRef}
-      className={`${styles.navBg} shadow w-full fixed top-0 z-50`}
+      className={`${styles.navBg} shadow w-full fixed top-0 z-50 opacity-90`}
       role="navigation"
     >
       <div className="container mx-auto p-4 flex flex-wrap items-center">
@@ -68,7 +68,7 @@ export default function Navbar() {
         <Navlinks
           ulClass={"hidden md:block ml-auto text-white"}
           liClass=""
-          linkClass="font-semibold text-gray-400 px-4"
+          linkClass="font-semibold text-gray-100 px-4"
         />
 
         {/* MOBILE BURGER MENU */}
@@ -87,7 +87,7 @@ export default function Navbar() {
               isOpen ? "opacity-100" : "opacity-0"
             } ease-out duration-300 flex flex-col justify-center items-center`}
             liClass={"py-1"}
-            linkClass={`font-semibold text-gray-400`}
+            linkClass={`font-semibold text-gray-100`}
           />
         </div>
       </div>

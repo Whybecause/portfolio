@@ -6,18 +6,9 @@
   /* COLORS */
   --main: #161825;
   --nav: rgb(24,30,42);
-  --main-light:#4c5068;
-  --primary: rgba(125, 153, 58, 0.6);
-  --primary-light: rgba(233, 210, 81, 0.6);
-  --secondary: yellow;
-  --secondary-light: rgb(119, 119, 23);
-  --secondary-light2: rgb(204, 204, 30);
   --white: white;
-  --gray: gray;
-  --gray-light:rgb(230, 225, 225);
-  --black: #333;
-  --red: red;
-  --red-light: rgb(241, 190, 190);
+  --green: rgb(74 222 128);
+  --gray: rgb(209 213 219);
 }
 
 * {
@@ -56,14 +47,36 @@ h1 {
   line-height: 1.25;
 }
 
+h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: var(--green);
+  font-weight: bold;
+  padding: 1rem;
+}
+@media(min-width: 768px) {
+  h2 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+@media(min-width: 1024px) {
+  h2 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
 h3 {
-  padding-top: 25px;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 p {
   font-size: 1.1rem;
   line-height: 1.7rem;
   font-weight: 400;
+  color: var(--gray);
 }
 
 li {
