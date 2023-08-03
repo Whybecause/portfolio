@@ -26,6 +26,10 @@ body {
   color: var(--white);
 }
 
+.mainBg {
+  background: var(--nav);
+}
+
 /* DEFAULT FONT OF THE APPLICATION
 --font-primary is instanciated in app/layout.tsx
 the #primaryFont wraps the entire application, just after the <body>

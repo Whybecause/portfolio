@@ -26,7 +26,7 @@ export default function RootLayout({
         <main id="primaryFont" className="flex flex-col">
           <Navbar />
           {children}
-          <footer></footer>
+          <footer className="relative bg-green-500 h-50">cest le footer</footer>
         </main>
       </body>
     </html>

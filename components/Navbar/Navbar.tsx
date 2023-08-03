@@ -1,15 +1,20 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+
+import { useScrollPosition } from "@/hooks/useScrollPosition";
 
 import Navlinks from "./Navlinks";
 import BurgerMenu from "./BurgerMenu";
-import styles from "./Navbar.module.css";
 
+import logo from "../../public/logo-no-bg.png";
+import styles from "./Navbar.module.css";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef<HTMLDivElement | null>(null);
+  const scrollPosition = useScrollPosition();
 
   // Auto close the burger menu when clicking outside the nav
   useEffect(() => {
@@ -43,21 +48,41 @@ export default function Navbar() {
     };
   });
 
+  // Keep track of scrolling position so we can change navbar design after we scroll the hero
+  const heroEndScroll = 800;
+
+  const dynamicNav = () => {
+    if (scrollPosition > heroEndScroll || isOpen) {
+      return "mainBg opacity-90 shadow";
+    } else {
+      return "opacity-100";
+    }
+  }
+
   return (
     <nav
       id="nav"
       ref={navRef}
-      className={`${styles.navBg} shadow w-full fixed top-0 z-50 opacity-90`}
+      className={`${dynamicNav()} ease-out duration-500 w-full fixed top-0 z-50 `}
       role="navigation"
     >
-      <div className="container mx-auto p-4 flex flex-wrap items-center">
-
+      <div className="container mx-auto p-2 flex flex-wrap items-center">
         {/* LOGO AND BRAND */}
         <div className="mr-4 md:mr-8">
-          <Link className="flex items-center" href="#home" rel="home">
-            <img
-              className="h-8 mr-2"
-              src="/logo-no-bg.png"
+          <Link
+            className="flex items-center"
+            href="/"
+            onClick={(e) => {
+              if (document.getElementById("homepage")) {
+                e.preventDefault();
+                document.getElementById("homepage")?.scrollIntoView({ behavior: 'smooth'})
+              }
+            }}
+          >
+            <Image
+              className="mr-2"
+              style={{ height: "50px", width: "50px"}}
+              src={logo}
               alt="Whybecause Logo"
             />
             <span className={styles.brand}>Whybecause</span>
@@ -69,6 +94,7 @@ export default function Navbar() {
           ulClass={"hidden md:block ml-auto text-white"}
           liClass=""
           linkClass="font-semibold text-gray-100 px-4"
+          setIsOpen={setIsOpen}
         />
 
         {/* MOBILE BURGER MENU */}
@@ -88,6 +114,7 @@ export default function Navbar() {
             } ease-out duration-300 flex flex-col justify-center items-center`}
             liClass={"py-1"}
             linkClass={`font-semibold text-gray-100`}
+            setIsOpen={setIsOpen}
           />
         </div>
       </div>
