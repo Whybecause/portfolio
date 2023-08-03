@@ -21,24 +21,21 @@ const NAV_ITEMS = [
 type NavlinksProps = {
   ulClass: string;
   liClass: string;
-  linkClass: string;
   setIsOpen: Function;
 };
 
 export default function Navlinks({
   ulClass,
   liClass,
-  linkClass,
   setIsOpen,
 }: NavlinksProps) {
   return (
     <ul className={ulClass}>
       {NAV_ITEMS.map((link) => (
-        <li className={liClass}>
+        <li className={liClass} key={link.label}>
           <Link
-            key={link.path}
             href={link.path}
-            className={linkClass}
+            className="font-semibold text-gray-100 group"
             onClick={(e) => {
               setIsOpen(false);
               e.preventDefault();
@@ -48,6 +45,7 @@ export default function Navlinks({
             }}
           >
             {link.label}
+            <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-green-300"></span>
           </Link>
         </li>
       ))}

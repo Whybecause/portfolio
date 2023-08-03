@@ -57,7 +57,7 @@ export default function Navbar() {
     } else {
       return "opacity-100";
     }
-  }
+  };
 
   return (
     <nav
@@ -75,13 +75,15 @@ export default function Navbar() {
             onClick={(e) => {
               if (document.getElementById("homepage")) {
                 e.preventDefault();
-                document.getElementById("homepage")?.scrollIntoView({ behavior: 'smooth'})
+                document
+                  .getElementById("homepage")
+                  ?.scrollIntoView({ behavior: "smooth" });
               }
             }}
           >
             <Image
               className="mr-2"
-              style={{ height: "50px", width: "50px"}}
+              style={{ height: "50px", width: "50px" }}
               src={logo}
               alt="Whybecause Logo"
             />
@@ -92,11 +94,9 @@ export default function Navbar() {
         {/* DESKTOP NAV LINKS */}
         <Navlinks
           ulClass={"hidden md:block ml-auto mainBg rounded-lg p-2"}
-          liClass=""
-          linkClass="font-semibold text-gray-100 px-4"
+          liClass="px-4"
           setIsOpen={setIsOpen}
         />
-
         {/* MOBILE BURGER MENU */}
         <div className="ml-auto md:hidden">
           <BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
@@ -109,11 +109,10 @@ export default function Navbar() {
           } w-full transition-all ease-out duration-500`}
         >
           <Navlinks
-            ulClass={`${
-              isOpen ? "opacity-100" : "opacity-0"
-            } ease-out duration-300 flex flex-col justify-center items-center`}
+            ulClass={`${isOpen ? styles.linksVisible : styles.linksInvisible} ${
+              styles.linksContainer
+            }`}
             liClass={"py-1"}
-            linkClass={`font-semibold text-gray-100`}
             setIsOpen={setIsOpen}
           />
         </div>

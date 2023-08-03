@@ -10,3 +10,24 @@
   white-space: nowrap;
   color: var(--white);
 }
+
+
+.linksContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: height 0.3s linear, visibility 0.3s linear, opacity 0.3s linear;
+}
+
+.linksInvisible {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+}
+
+.linksVisible {
+  visibility: visible;
+  opacity: 1;
+  height: 100%;
+}

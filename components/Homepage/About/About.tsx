@@ -13,7 +13,7 @@ function About() {
           loading="lazy"
         />
       </div>
-      <div id="about" className="flex justify-center items-center flex-col">
+      <div id="about" className="flex justify-center items-center text-center flex-col">
         <h2>{`< About />`}</h2>
         <p>Hey, I am a French developer around Paris.</p>
       </div>
