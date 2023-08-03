@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { useScrollPosition } from "@/hooks/useScrollPosition";
+import { usePathname } from 'next/navigation'
 
 import Navlinks from "./Navlinks";
 import BurgerMenu from "./BurgerMenu";
@@ -15,6 +16,9 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef<HTMLDivElement | null>(null);
   const scrollPosition = useScrollPosition();
+  const pathname = usePathname()
+  const isHomepage = pathname === '/';
+
 
   // Auto close the burger menu when clicking outside the nav
   useEffect(() => {
@@ -52,7 +56,7 @@ export default function Navbar() {
   const heroEndScroll = 800;
 
   const dynamicNav = () => {
-    if (scrollPosition > heroEndScroll || isOpen) {
+    if (scrollPosition > heroEndScroll || isOpen || !isHomepage) {
       return "mainBg opacity-90 border-b border-gray-600";
     } else {
       return "opacity-100 border-gray-900";

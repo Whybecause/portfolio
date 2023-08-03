@@ -2,6 +2,8 @@ import "./globals.css";
 import { Roboto_Mono } from "next/font/google";
 
 import Navbar from "@/components/Navbar/Navbar";
+import Footer from "@/components/Footer/Footer";
+
 // Here is defined the variable name of the font to be used in css
 const primaryFont = Roboto_Mono({
   variable: "--font-primary",
@@ -26,7 +28,7 @@ export default function RootLayout({
         <main id="primaryFont" className="flex flex-col">
           <Navbar />
           {children}
-          <footer className="relative bg-green-500 h-50">cest le footer</footer>
+          <Footer />
         </main>
       </body>
     </html>

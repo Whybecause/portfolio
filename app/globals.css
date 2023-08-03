@@ -26,16 +26,37 @@ body {
   color: var(--white);
 }
 
-.mainBg {
-  background: var(--nav);
-}
-
 /* DEFAULT FONT OF THE APPLICATION
 --font-primary is instanciated in app/layout.tsx
 the #primaryFont wraps the entire application, just after the <body>
 */
 #primaryFont {
   font-family: var(--font-primary);
+}
+
+/* Custom scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--nav);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(73, 73, 73);
+  border-radius: 5px;
+  }
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(92, 92, 92);
+}
+
+/* Default styles */
+
+.mainBg {
+  background: var(--nav);
 }
 
 a {
