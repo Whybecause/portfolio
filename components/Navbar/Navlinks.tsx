@@ -34,14 +34,16 @@ export default function Navlinks({
       {NAV_ITEMS.map((link) => (
         <li className={liClass} key={link.label}>
           <Link
-            href={link.path}
+            href={`/${link.path}`}
             className="font-semibold text-gray-100 group"
             onClick={(e) => {
               setIsOpen(false);
-              e.preventDefault();
-              document
-                .getElementById(link.id)
-                ?.scrollIntoView({ behavior: "smooth" });
+              if (document.getElementById(link.id)) {
+                e.preventDefault();
+                document
+                  .getElementById(link.id)
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }
             }}
           >
             {link.label}
