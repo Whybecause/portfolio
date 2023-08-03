@@ -91,7 +91,7 @@ export default function Navbar() {
 
         {/* DESKTOP NAV LINKS */}
         <Navlinks
-          ulClass={"hidden md:block ml-auto text-white"}
+          ulClass={"hidden md:block ml-auto mainBg rounded-lg p-2"}
           liClass=""
           linkClass="font-semibold text-gray-100 px-4"
           setIsOpen={setIsOpen}
