@@ -53,9 +53,9 @@ export default function Navbar() {
 
   const dynamicNav = () => {
     if (scrollPosition > heroEndScroll || isOpen) {
-      return "mainBg opacity-90 shadow";
+      return "mainBg opacity-90 border-b border-gray-600";
     } else {
-      return "opacity-100";
+      return "opacity-100 border-gray-900";
     }
   };
 
@@ -63,7 +63,7 @@ export default function Navbar() {
     <nav
       id="nav"
       ref={navRef}
-      className={`${dynamicNav()} ease-out duration-500 w-full fixed top-0 z-50 `}
+      className={`${dynamicNav()} ease-out duration-500 transition-colors w-full fixed top-0 z-50`}
       role="navigation"
     >
       <div className="container mx-auto p-2 flex flex-wrap items-center">

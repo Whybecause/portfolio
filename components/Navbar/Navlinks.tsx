@@ -45,7 +45,7 @@ export default function Navlinks({
             }}
           >
             {link.label}
-            <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-green-300"></span>
+            <span className="block max-w-0 group-hover:max-w-full group-focus:max-w-full transition-all duration-500 h-0.5 bg-green-300"></span>
           </Link>
         </li>
       ))}
