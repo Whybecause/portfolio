@@ -14,7 +14,7 @@ export default function Card ({ imgSrc, date, title, technos, slug }: CardProps)
         className="group"
         aria-label="Show contentary project details"
       >
-        <div className="flex items-center justify-center flex-col text-center absolute backdrop-blur-sm duration-300 gap-y-2 group-focus-visible:opacity-100 group-hover:opacity-100 inset-0 opacity-0 p-4 transition-opacity">
+        <div className="opaqueBg flex items-center justify-center flex-col text-center absolute backdrop-blur-sm duration-300 gap-y-2 group-focus-visible:opacity-100 group-hover:opacity-100 inset-0 opacity-0 p-4 transition-opacity">
           <div className="overflow-hidden">
             <p className="uppercase text-xs duration-300 group-focus-visible:translate-y-0 group-hover:translate-y-0 text-neutrals-50/90 transition-transform translate-y-full">
               {date}

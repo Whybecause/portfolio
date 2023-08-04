@@ -60,6 +60,10 @@ the #primaryFont wraps the entire application, just after the <body>
   background: var(--nav);
 }
 
+.opaqueBg {
+  background-color: #06091880;
+}
+
 a {
   color: inherit;
   cursor: pointer;
