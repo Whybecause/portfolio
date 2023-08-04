@@ -4,6 +4,7 @@ import Custom404 from "@/app/not-found";
 import { PROJECTS } from "../../../fakeDb/projects/index";
 import Image from "next/image";
 import GithubIcon from "@/components/styled/svg-icons/GithubIcon";
+import ArrowDownIcon from "@/components/styled/svg-icons/ArrowDownIcon";
 
 type MetadataProps = {
   params: { slug: string };
@@ -26,6 +27,8 @@ export default function Page({ params }: { params: { slug: string } }) {
   if (!project) {
     return <Custom404 />;
   }
+
+  const githubBaseURL = 'https://github.com/Whybecause';
 
   return (
     <>
@@ -51,7 +54,7 @@ export default function Page({ params }: { params: { slug: string } }) {
               <hr className="bg-gradient-to-r border-0 h-px to-transparent from-gray-100 mb-8 mt-4" />
               <div className="flex gap-x-4">
                 <a
-                  href="/"
+                  href={`${githubBaseURL}/${project.slug}`}
                   className="flex justify-center items-center active:[&:not(:disabled)]:scale-[1.01] align-middle before:-left-3 before:-skew-x-[16deg] before:-z-10 before:absolute before:duration-500 before:h-full before:origin-left before:scale-x-0 before:top-0 before:transition-transform before:w-[calc(100%+1.5rem)] border-2 border-gray-500 disabled:opacity-70 duration-500 focus-visible:[&:not(:disabled)]:before:scale-x-100 hover:[&:not(:disabled)]:before:scale-x-100 isolate md:px-4 md:py-2 md:text-base overflow-hidden px-3 py-1.5 relative rounded-sm select-none text-sm transition-all before:bg-gray-900 bg-gray-500 focus-visible:text-gray-500 hover:[&:not(:disabled)]:text-gray-500 text-gray-900"
                 >
                   <GithubIcon />
@@ -59,17 +62,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                 </a>
               </div>
             </div>
-            <svg
-              className="-translate-x-1/2 absolute animate-bounce bottom-[3vh] h-9 left-1/2 w-9 z-10"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                clip-rule="evenodd"
-                fill-rule="evenodd"
-                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-.53 14.03a.75.75 0 001.06 0l3-3a.75.75 0 10-1.06-1.06l-1.72 1.72V8.25a.75.75 0 00-1.5 0v5.69l-1.72-1.72a.75.75 0 00-1.06 1.06l3 3z"
-              ></path>
-            </svg>
+            <ArrowDownIcon />
           </div>
         </div>
       </div>

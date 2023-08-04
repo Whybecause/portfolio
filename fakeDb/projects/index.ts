@@ -3,14 +3,14 @@ export const PROJECTS = [
     date: "Sept 2022",
     title: "TheTipTop",
     technos: "Node.js, Sequelize, React, Cypress",
-    slug: "thetiptop",
+    slug: "thetiptop_public",
     imgSrc: "/projects/thetiptop.png",
   },
   {
     date: "Sept 2021",
     title: "Atypikhouse",
     technos: "Next.js, Typescript, Prisma",
-    slug: "atypikhouse",
+    slug: "atypikhouse_public",
     imgSrc: "/about.jpg",
   },
   {
@@ -24,7 +24,7 @@ export const PROJECTS = [
     date: "Feb 2021",
     title: "Spiid App",
     technos: "MERN Stack",
-    slug: "spiid-app",
+    slug: "spiid_app",
     imgSrc: "/projects/spiid-app.png",
   },
   {
@@ -45,14 +45,14 @@ export const PROJECTS = [
     date: "Oct 2020",
     title: "Amazon Checker",
     technos: "Node.js, Express, React, pupeteer",
-    slug: "amazon-checker",
+    slug: "amazon_checker",
     imgSrc: "/projects/amazon-checker.png",
   },
   {
     date: "June 2020",
     title: "Weather App",
     technos: "Vanilla Javascript",
-    slug: "weather-app",
+    slug: "weather_app",
     imgSrc: "/projects/weather-app-2.png",
   },
 ];
