@@ -1,9 +1,13 @@
 export default function Experience() {
   return (
-    <div id="experience" className="h-screen relative mainBg py-20">
-      <div className="container mx-auto">
-        <div className="flex justify-center items-center flex-col p-4">
-          <h2>{`< Experience />`}</h2>
+    <div
+      id="experience"
+      className="h-screen relative mainBg md:py-20"
+    >
+      <div className="container py-16 mx-auto">
+        <h2 className="text-center pb-14">{`< Experience />`}</h2>
+
+        <div className="px-4">
           <p>
             description dans la conjoncture actuelle le streptocoque est une
             bactérie gramme postivie de forme arrondie qui s'associe en

@@ -110,6 +110,10 @@ p {
 }
 
 li {
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+  font-weight: 400;
   float: left;
   list-style: none;
+  color: var(--gray);
 }
