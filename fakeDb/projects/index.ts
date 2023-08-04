@@ -16,7 +16,7 @@ export const PROJECTS = [
   {
     date: "July 2021",
     title: "Ingredients Manager",
-    technos: "Node.js, Express, React, mongoDB",
+    technos: "Mern Stack",
     slug: "ingredients-manager",
     imgSrc: "/projects/ingredients-manager.png",
   },
