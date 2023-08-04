@@ -21,18 +21,12 @@ function Hero() {
             <h1 className="lg:text-8xl md:text-7xl text-5xl text-center">
               Full-stack developer <br /> programing with love
             </h1>
-            <Link
+            <a
               href="/#projects"
               className={`${styles.btnCTA} md:text-lg md:px-8 md:py-4 hover:[&:not(:disabled)]:tracking-[0.075em]`}
-              onClick={(e) => {
-                e.preventDefault();
-                document
-                  .getElementById("projects")
-                  ?.scrollIntoView({ behavior: "smooth" });
-              }}
             >
               Discover
-            </Link>
+            </a>
           </div>
         </div>
       </div>

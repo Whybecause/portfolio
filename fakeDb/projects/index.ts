@@ -1,0 +1,58 @@
+export const PROJECTS = [
+  {
+    date: "Sept 2022",
+    title: "TheTipTop",
+    technos: "Node.js, Sequelize, React, Cypress",
+    slug: "thetiptop",
+    imgSrc: "/projects/thetiptop.png",
+  },
+  {
+    date: "Sept 2021",
+    title: "Atypikhouse",
+    technos: "Next.js, Typescript, Prisma",
+    slug: "atypikhouse",
+    imgSrc: "/about.jpg",
+  },
+  {
+    date: "July 2021",
+    title: "Ingredients Manager",
+    technos: "Node.js, Express, React, mongoDB",
+    slug: "ingredients-manager",
+    imgSrc: "/projects/ingredients-manager.png",
+  },
+  {
+    date: "Feb 2021",
+    title: "Spiid App",
+    technos: "MERN Stack",
+    slug: "spiid-app",
+    imgSrc: "/projects/spiid-app.png",
+  },
+  {
+    date: "Jan 2021",
+    title: "Mataviguette",
+    technos: "MERN Stack",
+    slug: "mataviguette",
+    imgSrc: "/projects/mataviguette.png",
+  },
+  {
+    date: "Oct 2020",
+    title: "Okessapar",
+    technos: "MERN Stack",
+    slug: "okessapar",
+    imgSrc: "/projects/okessapar.png",
+  },
+  {
+    date: "Oct 2020",
+    title: "Amazon Checker",
+    technos: "Node.js, Express, React, pupeteer",
+    slug: "amazon-checker",
+    imgSrc: "/projects/amazon-checker.png",
+  },
+  {
+    date: "June 2020",
+    title: "Weather App",
+    technos: "Vanilla Javascript",
+    slug: "weather-app",
+    imgSrc: "/projects/weather-app-2.png",
+  },
+];

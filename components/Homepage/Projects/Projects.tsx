@@ -1,63 +1,5 @@
 import Card from "./Card";
-
-export const PROJECTS_LIST = [
-  {
-    date: "Sept 2022",
-    title: "TheTipTop",
-    technos: "Node.js, Sequelize, React, Cypress",
-    slug: "thetiptop",
-    imgSrc: "/about.jpg",
-  },
-  {
-    date: "Sept 2021",
-    title: "Atypikhouse",
-    technos: "Next.js, Typescript, Prisma",
-    slug: "atypikhouse",
-    imgSrc: "/about.jpg",
-  },
-  {
-    date: "July 2021",
-    title: "Ingredients Manager",
-    technos: "Node.js, Express, React, mongoDB",
-    slug: "ingredients-manager",
-    imgSrc: "/about.jpg",
-  },
-  {
-    date: "Feb 2021",
-    title: "Spiid App",
-    technos: "MERN Stack",
-    slug: "spiid-app",
-    imgSrc: "/about.jpg",
-  },
-  {
-    date: "Jan 2021",
-    title: "Mataviguette",
-    technos: "MERN Stack",
-    slug: "mataviguette",
-    imgSrc: "/about.jpg",
-  },
-  {
-    date: "Oct 2020",
-    title: "Okessapar",
-    technos: "MERN Stack",
-    slug: "okessapar",
-    imgSrc: "/about.jpg",
-  },
-  {
-    date: "Oct 2020",
-    title: "Amazon Checker",
-    technos: "Node.js, Express, React, pupeteer",
-    slug: "amazon-checker",
-    imgSrc: "/about.jpg",
-  },
-  {
-    date: "June 2020",
-    title: "Weather App",
-    technos: "Vanilla Javascript",
-    slug: "weather-app",
-    imgSrc: "/about.jpg",
-  },
-];
+import { PROJECTS } from '../../../fakeDb/projects/index';
 
 export default function Projects() {
   return (
@@ -73,10 +15,10 @@ export default function Projects() {
             id="scrollContainer"
             className="flex pb-4 flex-no-wrap overflow-x-scroll scrolling-touch items-start"
           >
-            {PROJECTS_LIST.map((project) => (
+            {PROJECTS.map((project) => (
               <Card
                 key={project.title}
-                imgSrc={"/hero.jpg"}
+                imgSrc={project.imgSrc}
                 date={project.date}
                 title={project.title}
                 technos={project.technos}

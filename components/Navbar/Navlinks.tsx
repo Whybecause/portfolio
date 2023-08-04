@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 const NAV_ITEMS = [
   {
     label: "About",
@@ -33,22 +31,14 @@ export default function Navlinks({
     <ul className={ulClass}>
       {NAV_ITEMS.map((link) => (
         <li className={liClass} key={link.label}>
-          <Link
+          <a
             href={`/${link.path}`}
             className="font-semibold text-gray-100 group"
-            onClick={(e) => {
-              setIsOpen(false);
-              if (document.getElementById(link.id)) {
-                e.preventDefault();
-                document
-                  .getElementById(link.id)
-                  ?.scrollIntoView({ behavior: "smooth" });
-              }
-            }}
+            onClick={() => setIsOpen(false)}
           >
             {link.label}
             <span className="block max-w-0 group-hover:max-w-full group-focus:max-w-full transition-all duration-500 h-0.5 bg-green-300"></span>
-          </Link>
+          </a>
         </li>
       ))}
     </ul>

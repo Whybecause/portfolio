@@ -73,17 +73,9 @@ export default function Navbar() {
       <div className="container mx-auto p-2 flex flex-wrap items-center">
         {/* LOGO AND BRAND */}
         <div className="mr-4 md:mr-8">
-          <Link
+          <a
             className="flex items-center"
             href="/"
-            onClick={(e) => {
-              if (document.getElementById("homepage")) {
-                e.preventDefault();
-                document
-                  .getElementById("homepage")
-                  ?.scrollIntoView({ behavior: "smooth" });
-              }
-            }}
           >
             <Image
               className="mr-2"
@@ -92,7 +84,7 @@ export default function Navbar() {
               alt="Whybecause Logo"
             />
             <span className={styles.brand}>Whybecause</span>
-          </Link>
+          </a>
         </div>
 
         {/* DESKTOP NAV LINKS */}

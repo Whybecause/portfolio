@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 import Custom404 from "@/app/not-found";
-import { PROJECTS_LIST } from "@/components/Homepage/Projects/Projects";
+import { PROJECTS } from "../../../fakeDb/projects/index";
 import Image from "next/image";
 
 type MetadataProps = {
@@ -20,7 +20,7 @@ export async function generateMetadata({
 }
 
 export default function Page({ params }: { params: { slug: string } }) {
-  const project = PROJECTS_LIST.find((project) => project.slug === params.slug);
+  const project = PROJECTS.find((project) => project.slug === params.slug);
 
   if (!project) {
     return <Custom404 />;
