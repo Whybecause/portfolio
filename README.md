@@ -17,5 +17,6 @@ docker compose up
 -> Vercel will then automatically deploy the production branch.
 
 ## Production environment
-Hosting and domain name are handled on Vercel.
+Vercel: Handles hosting and domain name.
+Checkly: handles health checks automatically during deployment.
 

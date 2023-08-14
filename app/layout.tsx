@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Roboto_Mono } from "next/font/google";
+import { Metadata } from "next";
 import { Analytics } from '@vercel/analytics/react';
 
 import Navbar from "@/components/Navbar/Navbar";
@@ -13,7 +14,7 @@ const primaryFont = Roboto_Mono({
   weight: "400",
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Whybecause Portfolio",
   description: "I'm a Full-Stack developer, discover my universe",
 };
