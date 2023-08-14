@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Roboto_Mono } from "next/font/google";
+import { Analytics } from '@vercel/analytics/react';
 
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
@@ -13,8 +14,8 @@ const primaryFont = Roboto_Mono({
 });
 
 export const metadata = {
-  title: "Portfolio",
-  description: "Online CV",
+  title: "Whybecause Portfolio",
+  description: "I'm a Full-Stack developer, discover my universe",
 };
 
 export default function RootLayout({
@@ -28,6 +29,7 @@ export default function RootLayout({
         <main id="primaryFont" className="flex flex-col">
           <Navbar />
           {children}
+          <Analytics />
           <Footer />
         </main>
       </body>
