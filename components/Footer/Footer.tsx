@@ -12,7 +12,7 @@ export default function Footer() {
             className="flex items-center mb-4 sm:mb-0"
           >
             <img
-              src="/logo-no-bg.png"
+              src="/logo.png"
               className="h-8 mr-3"
               alt="Whybecause Logo"
             />

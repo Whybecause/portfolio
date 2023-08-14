@@ -89,7 +89,7 @@ export const PROJECTS = [
     title: "Weather App",
     technos: "Vanilla Javascript",
     slug: "weather_app",
-    imgSrc: "/projects/weather-app-2.png",
+    imgSrc: "/projects/weather-app.png",
     description: {
       header: [
         "A simple javascript app that fetches the weather from an open API.",

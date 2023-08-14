@@ -9,7 +9,7 @@ import { usePathname } from 'next/navigation'
 import Navlinks from "./Navlinks";
 import BurgerMenu from "./BurgerMenu";
 
-import logo from "../../public/logo-no-bg.png";
+import logo from "../../public/logo.png";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
