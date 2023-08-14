@@ -4,4 +4,4 @@ Disallow: /admin/
 User-agent: *
 Allow: /
 
-Sitemap: https://whybecause.xyz/sitemap.xml
+Sitemap: https://www.whybecause.xyz/sitemap.xml
