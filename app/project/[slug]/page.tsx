@@ -32,7 +32,7 @@ export default function Page({ params }: { params: { slug: string } }) {
 
   return (
     <>
-      <div className="h-screen">
+      <div className="min-h-screen">
         <div className="flex after:absolute after:bg-gradient-to-t after:from-gray-900 after:h-full after:inset-0 after:to-gray-900/60 after:w-full bg-gray-900 min-h-screen py-[14vh] relative w-full">
           <Image
             className="w-full object-center object-cover absolute h-full inset-0"

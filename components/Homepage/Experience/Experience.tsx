@@ -7,7 +7,7 @@ const EXPERIENCES = [
 
 export default function Experience() {
   return (
-    <div id="experience" className="h-screen relative mainBg md:py-20">
+    <div id="experience" className="min-h-screen relative mainBg md:py-20">
       <div className="container py-16 mx-auto">
         <h2 className="pb-14">{`< Experience />`}</h2>
 

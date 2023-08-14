@@ -6,7 +6,7 @@ function About() {
   return (
     <div
       id="about"
-      className="grid grid-cols-1 lg:grid-cols-2 gap-4 h-screen relative mainBg"
+      className="grid grid-cols-1 lg:grid-cols-2 gap-4 min-h-screen relative mainBg"
     >
       <Image
         src={about}

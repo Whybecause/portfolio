@@ -6,7 +6,7 @@ import background from "../../../public/hero.jpg";
 
 function Hero() {
   return (
-    <div className="fixed w-full h-screen inset-0 z-1">
+    <div className="fixed w-full min-h-screen inset-0 z-1">
       <Image
         alt="a nice background pitcure"
         src={background}

@@ -5,7 +5,7 @@ export default function Projects() {
   return (
     <div
       id="projects"
-      className="h-screen relative mainBg md:py-20 flex items-center"
+      className="min-h-screen relative mainBg md:py-20 flex items-center"
     >
       <div className="container flex-grow w-full sm:py-16 mx-auto px-0">
         <h2 className="text-center pb-14">{`< Projects />`}</h2>
