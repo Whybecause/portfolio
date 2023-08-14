@@ -1,12 +1,21 @@
-## Getting Started with docker
-To run the development server
+## Run the app for development
 ```bash
 COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker compose build
 docker compose up
 ```
 
-## Deploy on Vercel
+## Work & deployment
+1. Create a new branch to work on a feature
+2. Open a pull request from your branch to develop
+3. Once the PR has been approved, merge the branch to develop
+4. Pull the develop branch
+5. Run the script
+```bash
+./release.sh releaseName
+```
+-> this will merge the develop branch to the production branch.
+-> Vercel will then automatically deploy the production branch.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Production environment
+Hosting and domain name are handled on Vercel.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
