@@ -1,4 +1,17 @@
+// Slug = real slug to take from the github url of the project
 export const PROJECTS = [
+  {
+    date: "Nov 2024",
+    title: "Slack Clone",
+    technos: "Next.js, Convex, TS",
+    slug: "slack-clone",
+    imgSrc: "/projects/slack-clone.png",
+    description: {
+      header: ["Implements most of the features taken from slack."],
+      features: ["CRUD for workspaces, channels, members, threads, conversations, reactions.", "Upload image", "Caching data", "Auth providers"]
+    },
+    live_url: "https://slack-clone-murex-two.vercel.app/",
+  },
   {
     date: "Sept 2022",
     title: "TheTipTop",

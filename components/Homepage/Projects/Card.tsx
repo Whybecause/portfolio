@@ -6,9 +6,15 @@ type CardProps = {
   slug: string;
 };
 
-export default function Card ({ imgSrc, date, title, technos, slug }: CardProps) {
+export default function Card({
+  imgSrc,
+  date,
+  title,
+  technos,
+  slug,
+}: CardProps) {
   return (
-    <div className="flex-none mr-8 md:pb-4 rounded-lg overflow-hidden relative aspect-[2/3] h-[max(55vmin,20rem)] rounded-md transform">
+    <div className="flex-none mr-8 md:pb-4 rounded-md overflow-hidden relative aspect-[2/3] h-[max(55vmin,20rem)] transform">
       <a
         href={`/project/${slug}`}
         className="group"
@@ -39,4 +45,4 @@ export default function Card ({ imgSrc, date, title, technos, slug }: CardProps)
       </a>
     </div>
   );
-};
+}

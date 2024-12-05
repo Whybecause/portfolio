@@ -1,10 +1,11 @@
 import { Metadata } from "next";
-
 import Custom404 from "@/app/not-found";
 import { PROJECTS } from "../../../fakeDb/projects/index";
 import Image from "next/image";
 import GithubIcon from "@/components/styled/svg-icons/GithubIcon";
 import ArrowDownIcon from "@/components/styled/svg-icons/ArrowDownIcon";
+import { AppWindow, Link as IconLink } from "lucide-react";
+import Link from "next/link";
 
 type MetadataProps = {
   params: { slug: string };
@@ -45,12 +46,29 @@ export default function Page({ params }: { params: { slug: string } }) {
               <p className="text-xs uppercase lg:text-sm mb-4 text-gray-300">
                 {project.date}
               </p>
-              <h1 className="font-bold mb-4 lg:text-6xl text-4xl">
+              <h1 className="font-bold lg:text-6xl text-4xl">
                 {project.title}
               </h1>
-              <p className="max-w-prose leading-relaxed mb-8 text-gray-300">
-                {project.technos}
-              </p>
+
+              {project?.live_url && (
+                <>
+                  <div className="py-4 flex flex-row gap-x-2 items-center">
+                    <IconLink className="text-muted-foreground" />
+                    <Link
+                      href={project.live_url}
+                      className="font-semibold text-4xl text-[#4ade80] group"
+                    >
+                      Live Demo
+                      <span className="block max-w-0 group-hover:max-w-full group-focus:max-w-full transition-all duration-500 h-0.5 bg-green-300"></span>
+                    </Link>
+                  </div>
+                </>
+              )}
+
+              <div className="flex flex-row gap-x-2 items-center max-w-prose leading-relaxed py-4 text-gray-300">
+                <AppWindow className="text-muted-foreground" />
+                <p>{project.technos}</p>
+              </div>
               <hr className="bg-gradient-to-r border-0 h-px to-transparent from-gray-100 mb-8 mt-4" />
               <div className="flex gap-x-4">
                 <a

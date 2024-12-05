@@ -5,9 +5,9 @@
 :root {
   /* COLORS */
   --main: #161825;
-  --nav: rgb(24,30,42);
+  --nav: #181e2a;
   --white: white;
-  --green: rgb(74 222 128);
+  --green: #4ade80;
   --gray: rgb(209 213 219);
 }
 
