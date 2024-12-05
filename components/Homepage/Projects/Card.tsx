@@ -1,5 +1,5 @@
 type CardProps = {
-  imgSrc: string;
+  img_small: string;
   date: string;
   title: string;
   technos: string;
@@ -7,7 +7,7 @@ type CardProps = {
 };
 
 export default function Card({
-  imgSrc,
+  img_small,
   date,
   title,
   technos,
@@ -39,7 +39,7 @@ export default function Card({
         </div>
         <img
           className="w-full inset-0 -z-10 absolute h-full duration-700 group-focus-visible:scale-105 group-hover:scale-105 object-cover pointer-events-none transition-transform"
-          src={imgSrc}
+          src={img_small}
           alt="project picture"
         />
       </a>

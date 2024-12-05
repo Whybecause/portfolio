@@ -18,7 +18,7 @@ export default function Projects() {
             {PROJECTS.map((project) => (
               <Card
                 key={project.title}
-                imgSrc={project.imgSrc}
+                img_small={project.img_small}
                 date={project.date}
                 title={project.title}
                 technos={project.technos}

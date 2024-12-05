@@ -39,7 +39,7 @@ export default function Page({ params }: { params: { slug: string } }) {
             className="w-full object-center object-cover absolute h-full inset-0"
             fill
             alt="Picture of the project"
-            src={project.imgSrc}
+            src={project.img_large}
           />
           <div className="max-w-7xl mx-auto 2xl:w-4/5 w-11/12">
             <div className="flex justify-end flex-col h-full relative z-10">
@@ -120,7 +120,7 @@ export default function Page({ params }: { params: { slug: string } }) {
 
       <div className="relative container mx-auto h-screen">
         <Image
-          src={project.imgSrc}
+          src={project.img_large}
           alt={`Picture of ${project.title}`}
           objectFit="contain"
           objectPosition="top"
